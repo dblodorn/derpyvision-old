@@ -1,0 +1,121 @@
+@import 'normalize.css';
+
+$text-color-1: rgba(123,200,101,1);
+
+@keyframes cray {
+  0% {
+    filter: url("#filter1");
+  }
+  50% {
+    filter: url("#filter2");
+  }
+  100% {
+    filter: url("#filter3");
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(20deg) scale(1);
+  }
+  50% {
+    transform: rotate(-20deg) scale(1);
+  }
+  100% {
+    transform: rotate(20deg) scale(1);
+  }
+}
+
+@keyframes sway2 {
+  0% {
+    transform: rotate(20deg) scale(1.25);
+    filter: url("#filter1");
+  }
+  50% {
+    transform: rotate(-20deg) scale(5.5);
+    filter: url("#filter2");
+  }
+  100% {
+    transform: rotate(20deg) scale(1.25);
+    filter: url("#filter3");
+  }
+}
+
+.sway {
+  animation: sway 3s infinite;
+  cursor: pointer;
+  &:hover {
+    animation: sway2 150ms infinite;
+  }
+}
+
+span {
+  @extend .sway;
+}
+
+span:nth-child(odd) {
+  color: blue;
+}
+
+span:nth-child(even) {
+  color: yellow;
+}
+
+@font-face {
+  font-family: 'bb-book-light';
+  src:
+    url('/static/fonts/bb-bookA-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bb-book-regular';
+  src:
+    url('/static/fonts/bb-bookA-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bb-book-medium';
+  src:
+    url('/static/fonts/bb-bookA-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bb-book-bold';
+  src:
+    url('/static/fonts/bb-bookA-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.light {
+  font-family: 'bb-book-light';
+}
+
+.regular {
+  font-family: 'bb-book-regular';
+}
+
+.medium {
+  font-family: 'bb-book-medium';
+}
+
+.bold {
+  font-family: 'bb-book-bold';
+}
+
+body {
+  color: white;
+  font-family: 'bb-book-bold';
+}
+
+h1 {
+  font-size: 12vmin;
+  text-shadow: 1px 4px 0px rgba(0, 0, 0, 1);
+}
+
