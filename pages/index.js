@@ -2,7 +2,6 @@ import configVars from '../derpyConfig.json'
 import Link from  'next/link'
 import ReactPlayer from 'react-player'
 import Layout from '../components/MyLayout.js'
-// import AllVideoses from '../components/VideoList.js'
 
 export default () => (
   <Layout>
